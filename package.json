@@ -1,0 +1,28 @@
+{
+  "name": "mure-learner",
+  "version": "0.1.0",
+  "description": "A utility for converting SVG elements and their attributes back into d3 .append() and .attr() statements, including inference of data-driven attribute functions",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mure-apps/mure-learner.git"
+  },
+  "author": "Alex Bigelow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mure-apps/mure-learner/issues"
+  },
+  "homepage": "https://github.com/mure-apps/mure-learner#readme",
+  "devDependencies": {
+    "diff": "^3.4.0"
+  },
+  "dependencies": {
+    "d3": "^4.12.0"
+  }
+}
