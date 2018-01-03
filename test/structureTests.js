@@ -1,4 +1,4 @@
-/* globals d3, Model, JsDiff, phantom */
+/* globals d3, MureModel, JsDiff */
 
 let tests = [
   {
@@ -70,14 +70,14 @@ let tests = [
 ];
 tests.forEach(test => {
   let svg = d3.select('body').append('svg');
-  let testModel = new Model(test);
-  testModel.getEnterFunction().apply(svg.node());
+  let testMureModel = new MureModel(test);
+  testMureModel.getEnterFunction().apply(svg.node());
 
-  let learnedModel = new Model();
-  learnedModel.inferStructure(svg.selectAll('svg > ' + test.tag).nodes());
+  let learnedMureModel = new MureModel();
+  learnedMureModel.inferStructure(svg.selectAll('svg > ' + test.tag).nodes());
 
-  let testStructure = testModel.getReadableStructureString();
-  let learnedStructure = learnedModel.getReadableStructureString();
+  let testStructure = testMureModel.getReadableStructureString();
+  let learnedStructure = learnedMureModel.getReadableStructureString();
 
   if (testStructure === learnedStructure) {
     console.log('Passed structure test:');

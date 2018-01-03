@@ -1,4 +1,6 @@
-/* globals d3 */
+javascript:
+var MureModel = (function (d3) {
+'use strict';
 
 class Model {
   constructor (structure) {
@@ -111,4 +113,6 @@ class Model {
   }
 }
 
-// export default Model;
+return Model;
+
+}(d3));
